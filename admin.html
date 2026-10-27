@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiểm duyệt</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="thanh-dau-trang" id="dauTrang"></header>
+
+  <main class="khung-ung-dung mot-cot">
+    <div id="noiDungBangKiemDuyet" class="an">
+      <div class="luoi-chi-so-admin">
+        <div class="the-chi-so-admin"><div>Tổng Bài thảo luận</div><div class="so-lieu-admin" id="soTongBaiViet">0</div></div>
+        <div class="the-chi-so-admin"><div>Tổng Tài liệu chia sẻ</div><div class="so-lieu-admin" id="soTongTaiLieu">0</div></div>
+        <div class="the-chi-so-admin"><div>Báo cáo chờ xử lý</div><div class="so-lieu-admin nguy-hiem" id="soBaoCaoCho">0</div></div>
+        <div class="the-chi-so-admin"><div>Nội dung Hữu ích</div><div class="so-lieu-admin thanh-cong" id="soBaiHuuIch">0</div></div>
+      </div>
+
+      <div class="the-noi-dung">
+        <div class="tieu-de-the">&#128737; Hàng chờ Kiểm duyệt &amp; Xử lý Báo cáo</div>
+        <table class="bang-kiem-duyet">
+          <thead>
+            <tr><th>Phân loại</th><th>Nội dung</th><th>Lý do báo cáo</th><th>Ưu tiên</th><th>Trạng thái</th><th>Thao tác xử lý</th></tr>
+          </thead>
+          <tbody id="thanBangHangChoKiemDuyet"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

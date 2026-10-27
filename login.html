@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng nhập & Đăng ký</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+  <header class="thanh-dau-trang" id="dauTrang" data-don-gian></header>
+
+  <main class="khung-trang-xac-thuc">
+    <div class="hop-xac-thuc">
+      <div class="thanh-tab-xac-thuc">
+        <button type="button" class="nut-tab-xac-thuc dang-chon" id="nutTabDangNhap" onclick="chuyenTabXacThuc('dang_nhap')">Đăng nhập</button>
+        <button type="button" class="nut-tab-xac-thuc" id="nutTabDangKy" onclick="chuyenTabXacThuc('dang_ky')">Đăng ký tài khoản</button>
+      </div>
+
+      <div id="hopThongBaoXacThuc" class="thong-bao-xac-thuc"></div>
+
+      <!-- Đăng nhập -->
+      <section id="khungBieuMauDangNhap">
+        <form class="bieu-mau-xac-thuc" onsubmit="xuLyDangNhap(event)">
+          <div class="nhom-truong-nhap">
+            <label class="nhan-truong-nhap" for="dnLienHe">Số di động hoặc email</label>
+            <input type="text" id="dnLienHe" class="o-nhap-xac-thuc" placeholder="Nhập Số di động hoặc email..." required />
+          </div>
+          <div class="nhom-truong-nhap">
+            <label class="nhan-truong-nhap" for="dnMatKhau">Mật khẩu</label>
+            <input type="password" id="dnMatKhau" class="o-nhap-xac-thuc" placeholder="Nhập mật khẩu..." required />
+          </div>
+          <button type="submit" class="nut-gui-xac-thuc">Đăng nhập</button>
+        </form>
+
+        <div class="hop-tai-khoan-mau">
+          <div class="tieu-de-tai-khoan-mau">Tài khoản cấp sẵn:</div>
+          <p>&bull; <strong>Người kiểm duyệt:</strong> <code>admin@edu.vn</code> / MK: <code>123</code>
+            <button type="button" class="nut nut-nho nut-vien" onclick="dienNhanhTaiKhoanMau('admin')">Điền nhanh Admin</button></p>
+          <p>&bull; <strong>Người dùng:</strong> <code>an@edu.vn</code> / MK: <code>123</code>
+            <button type="button" class="nut nut-nho nut-vien" onclick="dienNhanhTaiKhoanMau('user')">Điền nhanh User</button></p>
+        </div>
+      </section>
+
+      <!-- Đăng ký -->
+      <section id="khungBieuMauDangKy" class="an">
+        <form class="bieu-mau-xac-thuc" onsubmit="xuLyDangKy(event)" novalidate>
+          <div class="nhom-truong-nhap">
+            <label class="nhan-truong-nhap">Tên</label>
+            <div class="hang-2-cot">
+              <input type="text" id="dkHo" class="o-nhap-xac-thuc" placeholder="Họ" required />
+              <input type="text" id="dkTen" class="o-nhap-xac-thuc" placeholder="Tên" required />
+            </div>
+          </div>
+
+          <div class="nhom-truong-nhap">
+            <label class="nhan-truong-nhap">Ngày sinh
+              <span class="bieu-tuong-tro-giup" title="Cung cấp ngày sinh của bạn để cá nhân hóa trải nghiệm học tập">?</span>
+            </label>
+            <div class="hang-3-cot">
+              <select id="dkNgaySinh" class="o-chon-xac-thuc" required><option value="" disabled selected>Ngày</option></select>
+              <select id="dkThangSinh" class="o-chon-xac-thuc" required><option value="" disabled selected>Tháng</option></select>
+              <select id="dkNamSinh" class="o-chon-xac-thuc" required><option value="" disabled selected>Năm</option></select>
+            </div>
+          </div>
+
+          <div class="nhom-truong-nhap">
+            <label class="nhan-truong-nhap">Giới tính
+              <span class="bieu-tuong-tro-giup" title="Bạn có thể thay đổi người nhìn thấy giới tính của mình trong hồ sơ cá nhân">?</span>
+            </label>
+            <select id="dkGioiTinh" class="o-chon-xac-thuc" required>
+              <option value="" disabled selected>Chọn giới tính</option>
+              <option value="Nữ">Nữ</option>
+              <option value="Nam">Nam</option>
+              <option value="Tùy chỉnh">Tùy chỉnh</option>
+            </select>
+          </div>
+
+          <div class="nhom-truong-nhap">
+            <label class="nhan-truong-nhap" for="dkLienHe">Số di động hoặc email</label>
+            <input type="text" id="dkLienHe" class="o-nhap-xac-thuc" placeholder="Số di động hoặc email" required />
+          </div>
+          <div class="nhom-truong-nhap">
+            <label class="nhan-truong-nhap" for="dkMatKhau">Mật khẩu</label>
+            <input type="password" id="dkMatKhau" class="o-nhap-xac-thuc" placeholder="Mật khẩu" required />
+          </div>
+
+          <button type="submit" class="nut-gui-xac-thuc">Gửi</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

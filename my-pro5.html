@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang cá nhân</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="thanh-dau-trang" id="dauTrang"></header>
+
+  <div class="khung-dau-trang-ca-nhan">
+    <div class="anh-bia-ca-nhan"></div>
+    <div class="thong-tin-dau-ca-nhan">
+      <div class="anh-dai-dien-lon" id="khungAnhDaiDienCaNhan">
+        <span id="noiDungAnhCaNhan"></span>
+        <div class="lop-phu-doi-anh">Thay đổi</div>
+      </div>
+      <input type="file" id="taiAnhDaiDienInput" accept="image/*" class="an" onchange="xuLyDoiAnhDaiDien(event)" />
+
+      <div class="hop-ten-ca-nhan">
+        <h1 id="tenTrangCaNhan"></h1>
+        <div class="tieu-su-ca-nhan" id="tieuSuTrangCaNhan"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="luoi-than-ca-nhan">
+    <aside>
+      <div class="the-noi-dung gioi-thieu-ca-nhan">
+        <div class="tieu-de-the">Giới thiệu</div>
+        <p><strong>&#128197; Ngày sinh:</strong> <span id="ngaySinhCaNhan"></span></p>
+        <p><strong>&#9895; Giới tính:</strong> <span id="gioiTinhCaNhan"></span></p>
+        <p><strong>&#128231; Liên hệ:</strong> <span id="lienHeCaNhan"></span></p>
+      </div>
+    </aside>
+
+    <section>
+      <div class="the-noi-dung khong-le">
+        <div class="thanh-tab-ca-nhan">
+          <button type="button" class="nut-tab-ca-nhan dang-chon" data-tab="bai_viet" onclick="chuyenTabCaNhan('bai_viet')">Bài viết</button>
+          <button type="button" class="nut-tab-ca-nhan" data-tab="dang_lai" onclick="chuyenTabCaNhan('dang_lai')">Bài đăng lại</button>
+        </div>
+      </div>
+      <div id="danhSachBaiViet"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/my-profile.js"></script>
+  <script src="js/post.js"></script>
+</body>
+</html>

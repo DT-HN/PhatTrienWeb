@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bạn bè & Kết nối học tập</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="thanh-dau-trang" id="dauTrang"></header>
+
+  <div class="bo-cuc-trang-ban-be">
+    <aside class="cot-trai-ban-be">
+      <h1>Bạn bè</h1>
+      <nav class="menu-ban-be">
+        <a href="index.html" class="muc-menu-ban-be">
+          <span class="muc-ban-be-trai"><span class="vong-icon-ban-be">&#127968;</span><span>Trang chủ</span></span>
+        </a>
+        <button type="button" class="muc-menu-ban-be dang-chon" data-tab="loi_moi" onclick="chuyenTabBanBe('loi_moi')">
+          <span class="muc-ban-be-trai"><span class="vong-icon-ban-be">&#10010;</span><span>Lời mời kết bạn</span></span>
+          <span class="mui-ten">&#10095;</span>
+        </button>
+        <button type="button" class="muc-menu-ban-be" data-tab="tat_ca" onclick="chuyenTabBanBe('tat_ca')">
+          <span class="muc-ban-be-trai"><span class="vong-icon-ban-be">&#128101;</span><span>Tất cả bạn bè</span></span>
+          <span class="mui-ten">&#10095;</span>
+        </button>
+      </nav>
+    </aside>
+
+    <main class="noi-dung-chinh-ban-be" id="khungNoiDungBanBe"></main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

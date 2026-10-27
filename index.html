@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="thanh-dau-trang" id="dauTrang"></header>
+
+  <main class="khung-ung-dung">
+    <!-- Cột trái: điều hướng -->
+    <aside>
+      <ul class="danh-sach-dieu-huong">
+        <li><a class="lien-ket-dieu-huong" onclick="locBangTinTheoCheDo('tat_ca')">Trang chủ</a></li>
+        <li><a class="lien-ket-dieu-huong" href="profile.html">Bạn bè</a></li>
+        <li><a class="lien-ket-dieu-huong" onclick="locBangTinTheoCheDo('huu_ich')">Nội dung hữu ích</a></li>
+        <li><a class="lien-ket-dieu-huong" onclick="locBangTinTheoCheDo('da_luu')">Nội dung đã lưu</a></li>
+      </ul>
+      <a href="login.html?tab=dang-nhap" class="nut-dang-nhap-cot-trai an" id="nutDangNhapTrai">Đăng nhập</a>
+    </aside>
+
+    <!-- Cột giữa: khung đăng bài & bảng tin -->
+    <section>
+      <div class="the-noi-dung" id="theTaoBaiViet">
+        <div class="khung-dang-bai-thu-nho" onclick="moHopThoaiDangBai()">
+          <div class="anh-dai-dien-nho anh-dai-dien-nguoi-dang"></div>
+          <div class="chu-goi-y-dang-bai">Bạn có muốn chia sẻ gì không ?</div>
+          <button type="button" class="nut-dang-bai vo-hieu" disabled>Đăng</button>
+        </div>
+      </div>
+
+      <div id="nenDangBai" class="nen-mo nen-mo-tren">
+        <div class="hop-thoai-dang-bai">
+          <div class="dau-hop-thoai-dang">
+            <button type="button" class="nut-van-ban" onclick="dongHopThoaiDangBai()">Hủy</button>
+            <strong>Tạo bài đăng mới</strong>
+            <span></span>
+          </div>
+
+          <div class="than-hop-thoai-dang">
+            <div class="anh-dai-dien-nho anh-dai-dien-nguoi-dang"></div>
+            <form class="vung-nhap-bai-viet" onsubmit="xuLyGuiBaiVietMoi(event)">
+              <textarea id="oNhapNoiDungBai" class="o-nhap-noi-dung-bai" placeholder="Bạn có muốn chia sẻ gì không ?" required></textarea>
+
+              <div id="khungXemTruocTep" class="khung-xem-truoc-tep an">
+                <div id="hopXemTruocAnh" class="hop-xem-truoc-anh an">
+                  <img id="anhXemTruoc" class="anh-xem-truoc" alt="Xem trước ảnh" />
+                  <button type="button" class="nut-xoa-anh-xem-truoc" onclick="xoaTepDinhKem()">&times;</button>
+                </div>
+                <div id="hopXemTruocTaiLieu" class="hop-xem-truoc-tai-lieu an">
+                  <span>&#128196; <strong id="tenTepXemTruoc"></strong></span>
+                  <button type="button" class="nut-xoa-tep-xem-truoc" onclick="xoaTepDinhKem()">&times;</button>
+                </div>
+              </div>
+
+              <div class="thanh-cong-cu-dinh-kem">
+                <label class="nut-icon-dinh-kem anh" title="Thêm ảnh">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  <input type="file" accept="image/*" class="an" onchange="xuLyTaiTepDinhKem(event, 'anh')" />
+                </label>
+                <label class="nut-icon-dinh-kem tep" title="Thêm tài liệu">
+                  <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  <input type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.zip,.rar,.pptx" class="an" onchange="xuLyTaiTepDinhKem(event, 'tep')" />
+                </label>
+              </div>
+
+              <div class="chan-hop-thoai-dang">
+                <div class="khu-vuc-doi-tuong">
+                  <span class="chu-mo">Lựa chọn về bài viết</span>
+                  <div class="boc-menu-doi-tuong">
+                    <button type="button" id="nutChonDoiTuong" class="nut-chon-doi-tuong" onclick="batTatMenuDoiTuong()">Công khai</button>
+                    <ul id="menuChonDoiTuong" class="menu-doi-tuong an">
+                      <li onclick="chonDoiTuongBaiViet('Công khai')">Công khai</li>
+                      <li onclick="chonDoiTuongBaiViet('Bạn bè')">Bạn bè</li>
+                      <li onclick="chonDoiTuongBaiViet('Chỉ mình tôi')">Chỉ mình tôi</li>
+                    </ul>
+                  </div>
+                </div>
+                <button type="submit" class="nut-dang-bai kich-hoat">Đăng</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="danhSachBaiViet"></div>
+    </section>
+
+    <!-- Cột phải: gợi ý đăng nhập cho khách -->
+    <aside class="cot-phai" id="hopGoiYKhachPhai"></aside>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/post.js"></script>
+</body>
+</html>
