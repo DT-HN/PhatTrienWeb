@@ -49,7 +49,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
 .o-nhap-lieu { width: 100%; padding: .6rem .8rem; border: 1px solid var(--vien); border-radius: var(--goc-vua); outline: none; background: #fff; }
 .o-nhap-lieu:focus { border-color: var(--mau-chinh); }
 
-/* Khung tròn căn giữa nội dung (ảnh đại diện, biểu tượng) */
+/* anh dai dien*/
 .nut-tron-dieu-huong, .nut-anh-dai-dien, .vong-tron-avatar, .vong-icon-menu, .vong-icon-ban-be,
 .anh-dai-dien, .anh-dai-dien-nho, .anh-the-noi, .nut-dong-tron, .bieu-tuong-thong-tin {
   display: grid; place-items: center; border-radius: 50%; flex-shrink: 0; overflow: hidden;
@@ -258,7 +258,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
 .khu-vuc-binh-luan { margin-top: .85rem; padding-top: .85rem; border-top: 1px dashed var(--vien); }
 .muc-binh-luan { margin-bottom: .55rem; padding: .65rem .85rem; background: var(--nen-trang); border-radius: var(--goc-vua); font-size: .88rem; }
 
-/* Thẻ nổi khi rê chuột vào tên người dùng */
+/* dua chuot qua ten nguoi dung */
 .boc-ten-nguoi-dung { position: relative; display: inline-block; }
 .lien-ket-ten-nguoi-dung { color: inherit; font-weight: 700; }
 .the-noi-thong-tin { position: absolute; top: calc(100% + 5px); left: 0; z-index: 9999; display: none; width: 280px; padding: 16px; background: #181818; color: #fff; border: 1px solid #333; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, .6); text-align: left; }
@@ -292,7 +292,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
 .nut-tab-ca-nhan.dang-chon { color: var(--mau-chinh); }
 .nut-tab-ca-nhan.dang-chon::after { content: ""; position: absolute; inset: auto 0 -1px; height: 3px; background: var(--mau-chinh); border-radius: 3px 3px 0 0; }
 
-/* banbe */
+/* ban be */
 .bo-cuc-trang-ban-be { display: grid; grid-template-columns: 340px minmax(0, 1fr); min-height: calc(100vh - 58px); }
 .cot-trai-ban-be { position: sticky; top: 58px; height: calc(100vh - 58px); overflow-y: auto; padding: 1.1rem .65rem; background: var(--nen-the); border-right: 1px solid var(--vien); }
 .cot-trai-ban-be h1 { padding: .15rem .65rem .85rem; font-size: 1.45rem; font-weight: 800; }
@@ -315,7 +315,7 @@ svg { stroke-linecap: round; stroke-linejoin: round; }
 .thong-tin-nguoi-ban { margin-bottom: .35rem; font-size: .82rem; color: var(--chu-mo); }
 .hanh-dong-the-ban { display: grid; gap: .4rem; margin-top: auto; }
 
-/* 11. TÀI LIỆU & KIỂM DUYỆT */
+/* tai lieu */
 .luoi-the-tai-lieu { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
 .the-tai-lieu { margin-bottom: 0; }
 .the-tai-lieu h3 { margin: .5rem 0; }
